@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang= "ko">
+<head>
+    <meta charset="utf-8">
+    <title>제목</title>
+</head>
+<body>
+    <h1>환율 계산</h1>
+    <div>
+        송금국가 :
+        <select name="send">
+           <option value="미국">미국</option>
+           <option value="호주">호주</option>
+        </select>
+    </div>
+    <div>
+        수취국가 :
+        <select name="recive">
+            <option value="한국">한국</option>
+            <option value="일본">일본</option>
+            <option value="필리핀">필리핀</option>
+        </select>
+    </div>
+    <div>
+        <a class="exchangeRate">환율 : 1,199.3</a><br>
+    </div>
+    <div>
+        송금액 : <input type="text" name="sendMoney"> USD<br>
+    </div>
+    <div>
+        <button class="currencyTest" type="button"
+                style="margin:10px auto; width:200px;" id="currencyTest">Submit
+        </button>
+    </div>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/main.js"></script>
