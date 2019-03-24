@@ -4,8 +4,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Map;
@@ -20,7 +18,7 @@ public class MainContorller {
 
     @GetMapping("/")
     public String home(Model model) {
-        ResponseEntity<Information> forEntity = restTemplate.getForEntity("http://apilayer.net/api/" + endpoint + "?access_key=" + access_key, Information.class);
+        ResponseEntity<DataOfCurrency> forEntity = restTemplate.getForEntity("http://apilayer.net/api/" + endpoint + "?access_key=" + access_key, DataOfCurrency.class);
         Map<String, String> currencyInformation = forEntity.getBody().getQuotes();
         model.addAttribute("koreaWon", currencyInformation.get("USDKRW"));
         return "index";
