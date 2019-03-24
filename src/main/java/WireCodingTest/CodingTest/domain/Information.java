@@ -1,4 +1,4 @@
-package WireCodingTest.CodingTest;
+package WireCodingTest.CodingTest.domain;
 
 public class Information {
     private String send;

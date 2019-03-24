@@ -1,4 +1,4 @@
-package WireCodingTest.CodingTest;
+package WireCodingTest.CodingTest.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

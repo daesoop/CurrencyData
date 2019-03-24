@@ -3,20 +3,18 @@ $(".currencyCalculate button[type='submit']").on('click', currency);
 function currency(e) {
     e.preventDefault();
     console.log("prevent is working");
-//    var information = new Object;
-//    information.send = "send";
-//    information.receive = "receive";
-//    information.sendMoney = 11;
 
-    var queryString = $(".currencyCalculate").serialize();
+   var obj = test();
 
     var url = $(".currencyCalculate").attr("action");
     console.log(url);
 
     $.ajax({
+        type : 'post',
         url : url,
-        data : queryString,
+        data : obj,
         dataType : 'json',
+        contentType : 'application/json',
         error : function(xhr) {
             alert("error");
             console.log(xhr);
@@ -27,4 +25,15 @@ function currency(e) {
             alert(data);
         }
     })
+
+    function test () {
+            var data = this. $(".currencyCalculate").serializeArray();
+            var object  = {};
+
+            for (var i = 0; i < data.length; i++) {
+                object[data[i].name] = data[i].value;
+            }
+
+            return JSON.stringify(object);
+        };
 }
