@@ -7,21 +7,27 @@
 </head>
 <body>
     <h1>환율 계산</h1>
-    <form class="currencyCalculate" action="/init">
+    <form class="currencyCalculate" action="/init" method="post">
         <div>
             송금국가 :
             <select name="send" id="send">
-               <option value="america">미국</option>
-               <option value="australia">호주</option>
+            {{#sendCountries}}
+               <option value= {{this}}>{{this}}</option>
+               <!--<option value="australia">호주</option>-->
+            {{/sendCountries}}
             </select>
         </div>
         <div>
             수취국가 :
             <select name="receive" id="receive">
-                <option value="korea">한국</option>
-                <option value="japan">일본</option>
-                <option value="philippine">필리핀</option>
+                {{#receiveCountries}}
+
+                <option value= {{this}} >{{this}}</option>
+                <!--<option value="japan">일본</option>-->
+                <!--<option value="philippine">필리핀</option>-->
+                {{/receiveCountries}}
             </select>
+
         </div>
         <div>
             <a class="exchangeRate">환율 : {{koreaWon}} KRW/USD</a><br>
@@ -38,4 +44,4 @@
 </body>
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="/js/main.js"></script>
+<script src="/main.js"></script>

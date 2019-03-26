@@ -8,21 +8,24 @@ function currency(e) {
 
     var url = $(".currencyCalculate").attr("action");
     console.log(url);
-
+    console.log(obj)
     $.ajax({
         type : 'post',
         url : url,
         data : obj,
         dataType : 'json',
         contentType : 'application/json',
-        error : function(xhr) {
+        error : function(xhr, data) {
             alert("error");
+            console.log(data.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+
             console.log(xhr);
         },
         success : function(data) {
             console.log("success");
             console.log(data);
             alert(data);
+            data.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
         }
     })
 
@@ -35,5 +38,5 @@ function currency(e) {
             }
 
             return JSON.stringify(object);
-        };
+    };
 }

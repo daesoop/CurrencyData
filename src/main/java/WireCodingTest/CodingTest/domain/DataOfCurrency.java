@@ -1,7 +1,5 @@
 package WireCodingTest.CodingTest.domain;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.util.Map;
 
 public class DataOfCurrency {
@@ -11,7 +9,7 @@ public class DataOfCurrency {
     private String privacy;
     private String timestamp;
     private String source;
-    private Map<String, String> quotes;
+    private Map<String, Double> quotes;
 
     public String getSuccess() {
         return success;
@@ -53,11 +51,11 @@ public class DataOfCurrency {
         this.source = source;
     }
 
-    public Map<String, String> getQuotes() {
+    public Map<String, Double> getQuotes() {
         return quotes;
     }
 
-    public void setQuotes(Map<String, String> quotes) {
+    public void setQuotes(Map<String, Double> quotes) {
         this.quotes = quotes;
     }
 

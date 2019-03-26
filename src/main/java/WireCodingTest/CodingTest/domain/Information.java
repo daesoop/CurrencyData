@@ -1,24 +1,27 @@
 package WireCodingTest.CodingTest.domain;
 
+import WireCodingTest.CodingTest.country.ReceiveCountry;
+import WireCodingTest.CodingTest.country.SendCountry;
+
 public class Information {
-    private String send;
-    private String receive;
+    private SendCountry send;
+    private ReceiveCountry receive;
     private int sendMoney;
 
-    public String getSend() {
+    public SendCountry getSend() {
         return send;
     }
 
     public void setSend(String send) {
-        this.send = send;
+        this.send = SendCountry.valueOf(send);
     }
 
-    public String getReceive() {
+    public ReceiveCountry getReceive() {
         return receive;
     }
 
     public void setReceive(String receive) {
-        this.receive = receive;
+        this.receive = ReceiveCountry.valueOf(receive);
     }
 
     public int getSendMoney() {
