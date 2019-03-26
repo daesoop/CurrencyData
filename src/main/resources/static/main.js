@@ -13,19 +13,19 @@ function currency(e) {
         type : 'post',
         url : url,
         data : obj,
-        dataType : 'json',
+        dataType : 'text',
         contentType : 'application/json',
-        error : function(xhr, data) {
+        error : function(xhr) {
             alert("error");
-            console.log(data.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-
             console.log(xhr);
+
         },
         success : function(data) {
             console.log("success");
             console.log(data);
             alert(data);
-            data.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+         //   data.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+         //   console.log(data);
         }
     })
 

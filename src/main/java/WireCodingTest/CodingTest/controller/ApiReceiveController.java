@@ -39,6 +39,7 @@ public class ApiReceiveController {
 
         double sendMoney = ParseInfo.calculateCurrency(information, quotes);
         DecimalFormat df = new DecimalFormat("#,##0.00");
-        return df.format(sendMoney);
+        String str = df.format(sendMoney);
+        return str;
     }
 }
