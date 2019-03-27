@@ -1,12 +1,18 @@
-//package WireCodingTest.CodingTest;
-//
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.context.support.MessageSourceAccessor;
-//import org.springframework.web.bind.annotation.RestControllerAdvice;
-//
-//@RestControllerAdvice
-//public class ExceptionControllerAdvice {
-//
-//    @Autowired
-//    private MessageSourceAccessor messageSourceAccessor;
-//}
+package WireCodingTest.CodingTest;
+
+public class ExceptionControllerAdvice extends RuntimeException{
+
+    private static final long serialVersionUID = 1L;
+
+    public ExceptionControllerAdvice() {
+        super();
+    }
+
+    public ExceptionControllerAdvice(String message) {
+        super(message);
+    }
+
+    public String getMessage(String s) {
+        return s;
+    }
+}

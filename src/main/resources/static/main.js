@@ -4,15 +4,14 @@ function currency(e) {
     e.preventDefault();
     console.log("prevent is working");
 
-   var obj = test();
+   var countryInformation = parseData();
 
     var url = $(".currencyCalculate").attr("action");
     console.log(url);
-    console.log(obj)
     $.ajax({
         type : 'post',
         url : url,
-        data : obj,
+        data : countryInformation,
         dataType : 'text',
         contentType : 'application/json',
         error : function(xhr) {
@@ -29,14 +28,14 @@ function currency(e) {
         }
     })
 
-    function test () {
-            var data = this. $(".currencyCalculate").serializeArray();
-            var object  = {};
+    function parseData() {
+            var data = this.$(".currencyCalculate").serializeArray();
+            var dataObject  = {};
 
             for (var i = 0; i < data.length; i++) {
-                object[data[i].name] = data[i].value;
+                dataObject[data[i].name] = data[i].value;
             }
 
-            return JSON.stringify(object);
+            return JSON.stringify(dataObject);
     };
 }

@@ -7,9 +7,9 @@ import java.util.Map;
 public enum SendCountry {
     미국("USD", "미국"), 호주("USDAUD", "호주");
 
-    private double money;
     private String moneyType;
     private String country;
+    private double money;
 
     SendCountry(String moneyType, String country) {
         this.moneyType = moneyType;

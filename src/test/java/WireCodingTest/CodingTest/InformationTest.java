@@ -2,7 +2,7 @@ package WireCodingTest.CodingTest;
 
 import WireCodingTest.CodingTest.country.ReceiveCountry;
 import WireCodingTest.CodingTest.country.SendCountry;
-import WireCodingTest.CodingTest.domain.Information;
+import WireCodingTest.CodingTest.domain.CountryInformation;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,11 +10,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class InformationTest {
 
-    private Information information;
+    private CountryInformation information;
 
     @Before
     public void setUp() throws Exception {
-        this.information = new Information();
+        this.information = new CountryInformation();
     }
 
     @Test
