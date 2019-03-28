@@ -26,6 +26,10 @@ public enum ReceiveCountry {
         }
     }
 
+    public String getMoneyType() {
+        return moneyType;
+    }
+
     public static List<String> getCountry() {
         List<String> countrys = new ArrayList<>();
         for (ReceiveCountry country : values()) {

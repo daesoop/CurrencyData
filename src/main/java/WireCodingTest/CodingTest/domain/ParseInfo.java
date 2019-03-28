@@ -31,7 +31,5 @@ public class ParseInfo {
     private static void sendMoney(Map<String, Double> countries) {
         sendMoneyRate = sendCountries.moneyInfo(countries);
         receiveMoneyRate = receiveCountries.moneyInfo(countries);
-        System.out.println("sendMoneyRate : " + sendMoneyRate);
-        System.out.println("receiveMoneyRate : " + receiveMoneyRate);
     }
 }

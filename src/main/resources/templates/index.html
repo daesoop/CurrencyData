@@ -1,46 +1,42 @@
-
 <!DOCTYPE html>
-<html lang= "ko">
+<html lang="ko">
 <head>
     <meta charset="utf-8">
     <title>제목</title>
 </head>
 <body>
-    <h1>환율 계산</h1>
-    <form class="currencyCalculate" action="/init" method="post">
-        <div>
+<h1>환율 계산</h1>
+<form class="currencyCalculate" action="/init" method="post">
+    <div>
             송금국가 :
             <select name="send" id="send">
             {{#sendCountries}}
                <option value= {{this}}>{{this}}</option>
-               <!--<option value="australia">호주</option>-->
             {{/sendCountries}}
             </select>
-        </div>
-        <div>
-            수취국가 :
-            <select name="receive" id="receive">
-                {{#receiveCountries}}
+    </div>
+    <div>
+        수취국가 :
+        <select name="receive" id="receive">
+            {{#receiveCountries}}
 
-                <option value= {{this}} >{{this}}</option>
-                <!--<option value="japan">일본</option>-->
-                <!--<option value="philippine">필리핀</option>-->
-                {{/receiveCountries}}
-            </select>
-
-        </div>
-        <div>
-            <a class="exchangeRate">환율 : {{koreaWon}} KRW/USD</a><br>
-        </div>
-        <div>
-            송금액 : <input type="text" name="sendMoney" id="sendMoney"> USD<br>
-        </div>
-        <div>
-            <button class="currencyTest" type="submit"
-                    style="margin:10px auto; width:200px;" id="currencyTest">Submit
-            </button>
-        </div>
-    </form>
+            <option value={{this}}>{{this}}</option>
+            {{/receiveCountries}}
+        </select>
+    </div>
+    <div>
+        <a class="exchangeRate">환율 : {{koreaWon}} KRW/USD</a><br>
+    </div>
+    <div>
+        송금액 : <input type="text" name="sendMoney" id="sendMoney"> USD<br>
+    </div>
+    <div>
+        <button class="currencyTest" type="submit"
+                style="margin:10px auto; width:200px;" id="currencyTest">Submit
+        </button>
+    </div>
+    <div class="value"></div>
+</form>
 </body>
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>

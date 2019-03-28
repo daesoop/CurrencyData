@@ -22,8 +22,6 @@ public enum SendCountry {
     }
 
     public Double moneyInfo(Map<String, Double> quotes) {
-        System.out.println(quotes);
-        System.out.println("머니타입 : " + quotes.get(this.moneyType));
         return quotes.get(this.moneyType);
     }
 
