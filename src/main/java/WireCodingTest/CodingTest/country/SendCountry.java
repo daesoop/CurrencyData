@@ -25,6 +25,7 @@ public enum SendCountry {
         return quotes.get(this.moneyType);
     }
 
+
     public static List<String> getCountry() {
         List<String> countriesName = new ArrayList<>();
         for (SendCountry country : values()) {
@@ -32,4 +33,13 @@ public enum SendCountry {
         }
         return countriesName;
     }
+
+    public double getMoney() {
+        return money;
+    }
+
+    public String getMoneyType() {
+        return moneyType;
+    }
+
 }

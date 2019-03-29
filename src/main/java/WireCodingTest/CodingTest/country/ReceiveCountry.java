@@ -6,7 +6,9 @@ import java.util.Map;
 
 
 public enum ReceiveCountry {
-    한국("USDKRW", "한국"), 일본("USDJPY", "일본"), 필리핀("USDPHP", "필리핀");
+    한국("USDKRW", "한국"),
+    일본("USDJPY", "일본"),
+    필리핀("USDPHP", "필리핀");
 
 
     private double money;
@@ -38,7 +40,12 @@ public enum ReceiveCountry {
         return countrys;
     }
 
+    public double getMoney() {
+        return money;
+    }
+
     public double moneyInfo(Map<String, Double> quotes) {
         return quotes.get(this.moneyType);
     }
+
 }

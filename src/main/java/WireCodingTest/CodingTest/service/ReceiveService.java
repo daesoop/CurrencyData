@@ -19,15 +19,28 @@ public class ReceiveService {
     private List<String> countriesList = Arrays.asList("USDKRW", "USDJPY", "USDPHP", "USDAUD");
     private DecimalFormat df = new DecimalFormat("#,##0.00");
     private double sendMoney = 0;
-    public String inputInfo(CountryInformation countryInformation, ResponseEntity<DataOfCurrency> response) {
+
+    //환율 정보와 송금할 금액을 확인하는 Service
+    public String sendMoneyInfo(CountryInformation countryInformation, ResponseEntity<DataOfCurrency> response) {
         Map<String, Double> wholeQuotesInformation = response.getBody().getQuotes();
         for (String country : countriesList) {
             countries.put(country, wholeQuotesInformation.get(country));
         }
         countries.put("USD", 1.00);
 
-        this.sendMoney = ParseInfo.calculateCurrency(countryInformation, countries);
+        this.sendMoney = ParseInfo.inputMoneyRate(countryInformation, countries);
 
         return df.format(sendMoney);
+    }
+
+    //환율 정보 확인하는 Service
+    public String currencyInfo(CountryInformation countryInformation, ResponseEntity<DataOfCurrency> response) {
+        Map<String, Double> wholeQuotesInformation = response.getBody().getQuotes();
+        for (String country : countriesList) {
+            countries.put(country, wholeQuotesInformation.get(country));
+        }
+        countries.put("USD", 1.00);
+        double num = ParseInfo.crossRate(countryInformation, countries);
+        return df.format(num);
     }
 }

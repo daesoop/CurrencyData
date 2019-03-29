@@ -1,24 +1,46 @@
-var info = "";
 $(".currencyCalculate button[type='submit']").on('click', currency);
 
-$("#send").on("change",sendRate);
-$("#receive").on("change",receiveRate);
-$("select[name=send]").val();
-$(function(){
+$('#send').change(sendRate=function(){
 
-    $("#send").change(function receiveRate(e) {
-        e.preventDefault();
-        alert("변경");
-        console.log("receive is working");
-    }
-    })
-})
+    var dataObject = new Object();
+    dataObject.send = $("select[name=send]").val();
+    dataObject.receive = $("select[name=receive]").val();
+    $.ajax({
+        type : 'post',
+        url:'/crossRate',
+        data: JSON.stringify(dataObject),
+        dataType:'text',
+        contentType : 'application/json',
+        error : function(xhr) {
+            console.log(xhr);
+        },
+        success:function(data){
+            $(".crossRate").html(data);
+        },
+    });
+});
 
-function sendRate(e) {
-    e.preventDefault();
-    alert("변경");
-    console.log("send is working");
-}
+
+
+$('#receive').change(receiveRate=function(){
+var receiveCountry = $("select[name=receive]").val();
+    var dataObject = new Object();
+        dataObject.send = $("select[name=send]").val();
+        dataObject.receive = $("select[name=receive]").val();
+        $.ajax({
+            type : 'post',
+            url:'/crossRate',
+            data: JSON.stringify(dataObject),
+            dataType:'text',
+            contentType : 'application/json',
+            error : function(xhr) {
+                console.log(xhr);
+            },
+            success:function(data){
+                $(".crossRate").html(data);
+            },
+        });
+});
 
 function currency(e) {
     e.preventDefault();

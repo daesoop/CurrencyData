@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>환율 계산</h1>
-<form class="currencyCalculate" action="/init" method="post">
+<form class="currencyCalculate" action="/calculateMoney" method="post">
     <div>
             송금국가 :
             <select name="send" id="send">
@@ -25,7 +25,7 @@
         </select>
     </div>
     <div>
-        <a class="exchangeRate">환율 : {{koreaWon}} KRW/USD</a><br>
+        <a class="crossRate">환율 : {{crossRate}} KRW/USD</a><br>
     </div>
     <div>
         송금액 : <input type="text" name="sendMoney" id="sendMoney"> USD<br>
