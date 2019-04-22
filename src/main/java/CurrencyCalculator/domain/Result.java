@@ -1,4 +1,4 @@
-package WireCodingTest.CodingTest.domain;
+package CurrencyCalculator.domain;
 
 public class Result {
     private boolean valid;

@@ -1,4 +1,4 @@
-package WireCodingTest.CodingTest.domain;
+package CurrencyCalculator.domain;
 
 import java.util.Map;
 

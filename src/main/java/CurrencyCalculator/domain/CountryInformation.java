@@ -1,8 +1,8 @@
-package WireCodingTest.CodingTest.domain;
+package CurrencyCalculator.domain;
 
-import WireCodingTest.CodingTest.exception.WrongInputNumber;
-import WireCodingTest.CodingTest.country.ReceiveCountry;
-import WireCodingTest.CodingTest.country.SendCountry;
+import CurrencyCalculator.country.ReceiveCountry;
+import CurrencyCalculator.country.SendCountry;
+import CurrencyCalculator.exception.WrongInputNumber;
 
 public class CountryInformation {
     private SendCountry send;

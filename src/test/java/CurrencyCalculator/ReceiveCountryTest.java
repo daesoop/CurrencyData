@@ -1,6 +1,7 @@
-package WireCodingTest.CodingTest;
+package CurrencyCalculator;
 
-import WireCodingTest.CodingTest.country.ReceiveCountry;
+import CurrencyCalculator.country.ReceiveCountry;
+import org.assertj.core.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -23,6 +24,6 @@ public class ReceiveCountryTest {
 
     @Test
     public void moneyInfo() {
-        assertThat(ReceiveCountry.한국.moneyInfo(quotes)).isEqualTo(quotes.get("USDKRW"));
+        Assertions.assertThat(ReceiveCountry.한국.moneyInfo(quotes)).isEqualTo(quotes.get("USDKRW"));
     }
 }

@@ -1,5 +1,5 @@
-package WireCodingTest.CodingTest;
-import WireCodingTest.CodingTest.country.SendCountry;
+package CurrencyCalculator;
+import CurrencyCalculator.country.SendCountry;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,8 +1,9 @@
-package WireCodingTest.CodingTest;
+package CurrencyCalculator;
 
-import WireCodingTest.CodingTest.country.ReceiveCountry;
-import WireCodingTest.CodingTest.domain.CountryInformation;
-import WireCodingTest.CodingTest.domain.ParseInfo;
+import CurrencyCalculator.country.ReceiveCountry;
+import CurrencyCalculator.domain.CountryInformation;
+import CurrencyCalculator.domain.ParseInfo;
+import org.assertj.core.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -31,7 +32,7 @@ public class ParseInfoTest {
     @Test
     public void crossRateTest() {
         double rate = ReceiveCountry.한국.moneyInfo(qutoes);
-        assertThat(ParseInfo.crossRate(countryInformation, qutoes)).isEqualTo(rate);
+        Assertions.assertThat(ParseInfo.crossRate(countryInformation, qutoes)).isEqualTo(rate);
     }
 
     @Test

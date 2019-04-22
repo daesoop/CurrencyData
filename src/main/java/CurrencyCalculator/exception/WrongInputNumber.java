@@ -1,4 +1,4 @@
-package WireCodingTest.CodingTest.exception;
+package CurrencyCalculator.exception;
 
 public class WrongInputNumber extends RuntimeException{
 

@@ -1,7 +1,6 @@
 $(".currencyCalculate button[type='submit']").on('click', currency);
 
 $('#send').change(sendRate=function(){
-
     var dataObject = new Object();
     dataObject.send = $("select[name=send]").val();
     dataObject.receive = $("select[name=receive]").val();
@@ -23,7 +22,7 @@ $('#send').change(sendRate=function(){
 
 
 $('#receive').change(receiveRate=function(){
-var receiveCountry = $("select[name=receive]").val();
+    var receiveCountry = $("select[name=receive]").val();
     var dataObject = new Object();
         dataObject.send = $("select[name=send]").val();
         dataObject.receive = $("select[name=receive]").val();
@@ -68,6 +67,7 @@ function currency(e) {
                 alert(data.errorMessage);
             }
             $(".value").html(data.value);
+
         }
     })
 

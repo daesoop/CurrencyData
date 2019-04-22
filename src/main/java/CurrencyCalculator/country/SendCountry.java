@@ -1,4 +1,4 @@
-package WireCodingTest.CodingTest.country;
+package CurrencyCalculator.country;
 
 import java.util.ArrayList;
 import java.util.List;

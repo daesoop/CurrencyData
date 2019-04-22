@@ -1,7 +1,7 @@
-package WireCodingTest.CodingTest.domain;
+package CurrencyCalculator.domain;
 
-import WireCodingTest.CodingTest.country.ReceiveCountry;
-import WireCodingTest.CodingTest.country.SendCountry;
+import CurrencyCalculator.country.ReceiveCountry;
+import CurrencyCalculator.country.SendCountry;
 
 import java.util.Map;
 

@@ -1,8 +1,8 @@
-package WireCodingTest.CodingTest.controller;
+package CurrencyCalculator.controller;
 
-import WireCodingTest.CodingTest.country.ReceiveCountry;
-import WireCodingTest.CodingTest.country.SendCountry;
-import WireCodingTest.CodingTest.domain.DataOfCurrency;
+import CurrencyCalculator.country.SendCountry;
+import CurrencyCalculator.country.ReceiveCountry;
+import CurrencyCalculator.domain.DataOfCurrency;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

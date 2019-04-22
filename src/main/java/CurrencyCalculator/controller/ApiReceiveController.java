@@ -1,10 +1,10 @@
-package WireCodingTest.CodingTest.controller;
+package CurrencyCalculator.controller;
 
-import WireCodingTest.CodingTest.exception.WrongInputNumber;
-import WireCodingTest.CodingTest.domain.CountryInformation;
-import WireCodingTest.CodingTest.domain.DataOfCurrency;
-import WireCodingTest.CodingTest.domain.Result;
-import WireCodingTest.CodingTest.service.ReceiveService;
+import CurrencyCalculator.exception.WrongInputNumber;
+import CurrencyCalculator.domain.CountryInformation;
+import CurrencyCalculator.domain.DataOfCurrency;
+import CurrencyCalculator.domain.Result;
+import CurrencyCalculator.service.ReceiveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
@@ -46,4 +46,5 @@ public class ApiReceiveController {
         ResponseEntity<DataOfCurrency> response = restTemplate.getForEntity(currencyLayerURI, DataOfCurrency.class);
         return "환율 : " + receiveService.currencyInfo(crossRateInfo, response) + " " +crossRateInfo.getReceive().getMoneyType() ;
     }
+
 }

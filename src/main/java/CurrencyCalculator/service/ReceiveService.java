@@ -1,8 +1,8 @@
-package WireCodingTest.CodingTest.service;
+package CurrencyCalculator.service;
 
-import WireCodingTest.CodingTest.domain.CountryInformation;
-import WireCodingTest.CodingTest.domain.DataOfCurrency;
-import WireCodingTest.CodingTest.domain.ParseInfo;
+import CurrencyCalculator.domain.CountryInformation;
+import CurrencyCalculator.domain.DataOfCurrency;
+import CurrencyCalculator.domain.ParseInfo;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
