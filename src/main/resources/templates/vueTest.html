@@ -1,0 +1,30 @@
+<html>
+<head>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+    <input type="text" class="message" v-model="message"/>
+    <button @click="openNew()">Button</button>
+</div>
+<script>
+
+var vm = new Vue({
+    el : "#app",
+    data:{
+       message : ""
+    },
+    methods: {
+        openNew: function() {
+            alert("asdsadads");
+            console.log(this.message);
+        }
+    }
+});
+
+
+
+</script>
+</body>
+</html>
+

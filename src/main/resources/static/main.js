@@ -19,8 +19,6 @@ $('#send').change(sendRate=function(){
     });
 });
 
-
-
 $('#receive').change(receiveRate=function(){
     var receiveCountry = $("select[name=receive]").val();
     var dataObject = new Object();
@@ -78,7 +76,6 @@ function currency(e) {
             for (var i = 0; i < data.length; i++) {
                 dataObject[data[i].name] = data[i].value;
             }
-
             return JSON.stringify(dataObject);
     };
 }

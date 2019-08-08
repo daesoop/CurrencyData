@@ -41,7 +41,7 @@ public class ApiReceiveController {
     }
 
     //송금국가 및 수취국가 변경시 환율정보 새로 가져오기
-    @PostMapping("/crossRate")
+    @PostMapping("Rate")
     public String crossRate(@RequestBody CountryInformation crossRateInfo) {
         ResponseEntity<DataOfCurrency> response = restTemplate.getForEntity(currencyLayerURI, DataOfCurrency.class);
         return "환율 : " + receiveService.currencyInfo(crossRateInfo, response) + " " +crossRateInfo.getReceive().getMoneyType() ;

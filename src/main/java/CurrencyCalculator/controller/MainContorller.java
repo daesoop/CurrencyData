@@ -33,4 +33,27 @@ public class MainContorller {
         return "index";
     }
 
+    @GetMapping("/lasttest")
+    public String lasttest() {
+        return "lastTest";
+    }
+
+    @GetMapping("/testing")
+    public String test() {
+        return "vueTest";
+    }
+
+    @GetMapping("/testDrag")
+    public String testdrag() { return "test"; }
+
+    @GetMapping("/testtest")
+    public String testtest() {
+        return "testtest";
+    }
+
+    @GetMapping("/testsoop")
+    public String testsoop() {
+        return "testsoop";
+    }
+
 }
